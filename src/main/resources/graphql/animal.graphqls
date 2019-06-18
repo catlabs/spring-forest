@@ -1,0 +1,10 @@
+type Animal {
+  id: ID!
+  name: String!
+  cutness: Int!
+  intelligence: Int!
+}
+
+type Query {
+  findAllAnimals: [Animal]!
+}
