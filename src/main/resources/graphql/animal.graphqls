@@ -7,4 +7,5 @@ type Animal {
 
 type Query {
   findAllAnimals: [Animal]!
+  findByName(name: String!): Animal
 }
