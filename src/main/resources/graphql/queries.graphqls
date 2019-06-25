@@ -5,7 +5,13 @@ type Animal {
   intelligence: Int!
 }
 
+type Food {
+  id: ID!
+  name: String!
+}
+
 type Query {
   findAllAnimals: [Animal]!
   findByName(name: String!): Animal
+  foods: [Food]!
 }

@@ -8,15 +8,12 @@ import org.springframework.context.annotation.Bean;
 @SpringBootApplication
 public class CatlabsApiApplication {
 
-	@Autowired
-	private AnimalRepository repository;
-
 	public static void main(String[] args) {
 		SpringApplication.run(CatlabsApiApplication.class, args);
 	}
 
 	@Bean
-	public Query query(AnimalRepository animalRepository) {
-		return new Query(animalRepository);
+	public Query query(AnimalRepository animalRepository, FoodRepository foodRepository) {
+		return new Query(animalRepository, foodRepository);
 	}
 }
