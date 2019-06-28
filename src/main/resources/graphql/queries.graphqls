@@ -1,17 +1,18 @@
-type Animal {
-  id: ID!
-  name: String!
-  cutness: Int!
-  intelligence: Int!
-}
-
 type Food {
   id: ID!
   name: String!
 }
 
+type Animal {
+  id: ID!
+  name: String!
+  cutness: Int!
+  intelligence: Int!
+  foods: [Food]
+}
+
 type Query {
-  findAllAnimals: [Animal]!
+  animals: [Animal]!
   findByName(name: String!): Animal
   foods: [Food]!
 }

@@ -11,7 +11,7 @@ public class Query implements GraphQLQueryResolver {
         this.foodRepository = foodRepository;
     }
 
-    public Iterable<Animal> findAllAnimals() {
+    public Iterable<Animal> animals() {
         return animalRepository.findAll();
     }
     public Animal findByName(String name) {
